@@ -12,8 +12,12 @@
     <properties>
         <hadoop.version>3.2.0</hadoop.version>
         <hadoop-core.version>1.2.1</hadoop-core.version>
+        <!-- 使用jdk1.8启动，设置字符集解析为UTF-8 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
-
+    <!-- 导入hadoop依赖环境 -->
     <dependencies>
         <dependency>
             <groupId>org.apache.hadoop</groupId>
@@ -25,6 +29,7 @@
             <artifactId>hadoop-common</artifactId>
             <version>${hadoop.version}</version>
         </dependency>
+        <!-- 导入jar tools包，java环境仅限于1.8 -->
         <dependency>
             <groupId>jdk.tools</groupId>
             <artifactId>jdk.tools</artifactId>
@@ -33,6 +38,7 @@
             <systemPath>${env.JAVA_HOME}/lib/tools.jar</systemPath>
         </dependency>
     </dependencies>
+    <!-- 导入apache镜像原 -->
     <repositories>
         <repository>
             <id>apache</id>
