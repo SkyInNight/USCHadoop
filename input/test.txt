@@ -1,4 +1,3 @@
 Hello World
 My name is Kezhou Liu.
-I majored in software engine
-ering in University Of South China.
+I majored in software engineering in University Of South China.
